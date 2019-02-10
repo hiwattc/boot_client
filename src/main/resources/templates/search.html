@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> /include/header }}
+</head>
+<body>
+	{{> /include/navigation }}
+	<div class="container">
+		<h1>User's LIST</h1>
+	</div>
+	
+<form action="http://localhost:8080/api/users/" id="searchForm">
+  <input type="text" name="s" placeholder="Search...">
+  <input type="submit" value="Search">
+</form>
+<!-- the result of the search will be rendered inside this div -->
+<div id="result"></div>
+ 
+<script>
+// Attach a submit handler to the form
+$( "#searchForm" ).submit(function( event ) {
+ 
+  // Stop form from submitting normally
+  event.preventDefault();
+ 
+  // Get some values from elements on the page:
+  var $form = $( this ),
+    term = $form.find( "input[name='s']" ).val(),
+    url = $form.attr( "action" );
+ 
+  // Send the data using post
+  var posting = $.post( url, { s: term } );
+ 
+  // Put the results in a div
+  posting.done(function( data ) {
+	//alert(data);
+    //var content = $( data ).find( "#content" );
+    console.log(data);
+    console.log(JSON.stringify(data));
+    
+    //$( "#result" ).append( "TEST RESULT" );
+    $( "#result" ).append( JSON.stringify(data) );
+    //$( "#result" ).html( data.result );
+    //$( "#result" ).empty().append( content );
+  });
+});
+
+
+</script>
+
+	
+</body>
+</html>

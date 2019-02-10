@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> /include/header }}
+</head>
+<body>
+	{{> /include/navigation }}
+	<div class="container">
+		<h1>User's LIST</h1>
+
+		<div class="table-responsive">
+				{{#list}}
+					<div class="list-group">
+					    </p>
+					    <h3>{{userId}}</h3>
+						<h5 class="media-heading">
+							{{name}} <small><i>Email {{email}}</i></small>
+						</h5>
+						<div>
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Email</th>
+										<th>Name</th>
+										<th>Email</th>
+									</tr>
+								</thead>
+								<tbody>
+									{{#list}}
+									<tr>
+										<td>{{name}}</td>
+										<td>{{email}}</td>
+										<td>{{name}}</td>
+										<td>{{email}}</td>
+									</tr>
+									{{/list}}
+								</tbody>
+							</table>
+						</div>
+					</div>					
+				{{/list}}
+			
+		</div>
+
+	</div>
+</body>
+</html>

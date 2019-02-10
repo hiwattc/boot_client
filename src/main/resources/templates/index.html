@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> /include/header }}
+</head>
+<body>
+	{{> /include/navigation }}
+	<div class="container">
+		<!-- 		<h1>MAIN</h1> -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<h2>Recently</h2>
+				<br>
+				{{#title}}
+					<div class="list-group">
+					  <a href="/board/list/{{title}}" class="list-group-item">
+					    </p>
+						<h5 class="media-heading">
+							{{title}} <small><i>Message {{message}}</i></small>
+						</h5>
+					  </a>
+					</div>					
+				{{/title}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6">
+					<h2>Nature</h2>
+					<p>The .img-circle class shapes the image to a circle (not
+						available in IE8):</p>
+					<img src="https://source.unsplash.com/1600x900/?nature" class="img-circle" alt="Cinque Terre"
+						width="304" height="236">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
