@@ -7,14 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BootClientApplication {
 
 	public static void main(String[] args) {
-		//test
-		//test
-		//test
-		//test
-		//test
-		//test
-		//test
-		//test
+		//test111111111111111
+		//test111111111111111
+		//test111111111111111
+		//test111111111111111
+		//test111111111111111
+		//test111111111111111
 		SpringApplication.run(BootClientApplication.class, args);
 	}
 
